@@ -9,7 +9,7 @@ public class PlayerMovementController : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
     public Animator animator;
-    
+
     private Vector2 movement;
 
     public int maxHealth = 50;
@@ -19,42 +19,46 @@ public class PlayerMovementController : MonoBehaviour
     private float invincibleTimer;
     private bool isInvincible;
 
-    
-   void Start()
-   {
-    currentHealth = maxHealth;
-    invincibleTimer = 0;
-    isInvincible = false;
-   }
-    
-    // Update is called once per frame
-    void Update()
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+        invincibleTimer = 0;
+        isInvincible = false;
+    }
+
+    private void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        
+
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        if (isInvincible){
-        invincibleTimer -= Time.deltaTime;
-        if (invincibleTimer < 0)
-            isInvincible = false;
-    }
+        if (isInvincible)
+        {
+            invincibleTimer -= Time.deltaTime;
+
+            if (invincibleTimer < 0)
+            {
+                isInvincible = false;
+            }
+        }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * (speed * Time.fixedDeltaTime));
     }
 
-    public void changeHealth(int amount){
+    public void ChangeHealth(int amount)
+    {
         if (amount < 0)
         {
             if (isInvincible)
                 return;
-            
+
             isInvincible = true;
             invincibleTimer = timeInvincible;
         }
@@ -64,7 +68,8 @@ public class PlayerMovementController : MonoBehaviour
         Debug.Log("Player heatlh: " + currentHealth + "/" + maxHealth);
     }
 
-    private IEnumerator VisualIndicator (Color color){
+    private IEnumerator VisualIndicator(Color color)
+    {
         GetComponent<SpriteRenderer>().color = color;
         yield return new WaitForSeconds(0.15f);
         GetComponent<SpriteRenderer>().color = Color.white;

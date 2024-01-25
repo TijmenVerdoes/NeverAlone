@@ -11,9 +11,8 @@ public class ShootingController : MonoBehaviour
     public Rigidbody2D playerRb;
 
     public float bulletForce = 20f;
-    
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -21,7 +20,7 @@ public class ShootingController : MonoBehaviour
         }
     }
 
-    void Shoot()
+    private void Shoot()
     {
         var animator = gameObject.GetComponent<Animator>();
         var animatorInfo = animator.GetCurrentAnimatorClipInfo(0);
@@ -46,6 +45,6 @@ public class ShootingController : MonoBehaviour
                 break;
         }
         
-        AudioSource.PlayClipAtPoint(clip, this.gameObject.transform.position);
+        AudioSource.PlayClipAtPoint(clip, gameObject.transform.position);
     }
 }
