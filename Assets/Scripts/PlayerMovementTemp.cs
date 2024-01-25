@@ -56,6 +56,13 @@ public class PlayerMovementTemp : MonoBehaviour
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        StartCoroutine(VisualIndicator(Color.red));
         Debug.Log("Player heatlh: " + currentHealth + "/" + maxHealth);
+    }
+
+    private IEnumerator VisualIndicator (Color color){
+        GetComponent<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(0.15f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

@@ -38,8 +38,16 @@ public class AIChase : MonoBehaviour
     void changeHealth(int amount){
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log("Enemy health:" + currentHealth + "/" + maxHealth);
+        StartCoroutine(VisualIndicator(Color.red));
+        
         if(currentHealth <= 0){
              Destroy(gameObject);
         }
+    }
+
+    private IEnumerator VisualIndicator (Color color){
+        GetComponent<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(0.15f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
