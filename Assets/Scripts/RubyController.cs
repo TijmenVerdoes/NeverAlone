@@ -2,58 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class RubyController : MonoBehaviour {
+  // Start is called before the first frame update
 
-public class RubyController : MonoBehaviour
-{
-    // Start is called before the first frame update
+  private float maximumDistanceSquered = 9f;
+  private float playerSpeed = 0.1f;
+  void Start() {}
 
-    float maximumDistance = 3.0f;
-    float maximumDistanceSquered = 9f;
-    void Start()
-    {
-        
+  private void movePlayer() {
+    float horizontal = Input.GetAxis("Horizontal");
+    float vertical = Input.GetAxis("Vertical");
+    Vector2 position = transform.position;
+    position.x = position.x + playerSpeed * horizontal;
+    position.y = position.y + playerSpeed * vertical;
+
+    transform.position = position;
+  }
+
+  private bool isPlayerInTorch() {
+    Vector2 position = transform.position;
+    float xDifference = position.x - NewBehaviourScript.xPositionTorch;
+    float yDifference = position.y - NewBehaviourScript.yPositionTorch;
+
+    float triangeTotal = xDifference * xDifference + yDifference * yDifference;
+
+    if (triangeTotal > maximumDistanceSquered) {
+      return false;
     }
+    return true;
+  }
 
-    // Update is called once per frame
-    void Update()
-    {
+  private void getPlayerInTorch() {
+    Vector2 position = transform.position;
 
-        float horizontal = Input.GetAxis("Horizontal");
-       float vertical = Input.GetAxis("Vertical");
-        // Debug.Log(horizontal);
-        // Debug.Log(vertical);
-       Vector2 position = transform.position;
-       position.x = position.x + 0.1f * horizontal;
-       position.y = position.y + 0.1f * vertical;
-       
-        float xDifference = position.x - NewBehaviourScript.xPositionTorch;
-        float yDifference = position.y - NewBehaviourScript.yPositionTorch;
+    position.x = NewBehaviourScript.xPositionTorch;
+    position.y = NewBehaviourScript.yPositionTorch;
 
-        float triangeTotal = xDifference * xDifference + yDifference * yDifference;
+    transform.position = position;
+  }
 
-        if (triangeTotal > maximumDistanceSquered){
-                  position.x = NewBehaviourScript.xPositionTorch;
-        position.y = NewBehaviourScript.yPositionTorch;
-        }
+  // Update is called once per frame
+  void Update() {
+    movePlayer();
 
-
-
-
-
-      // if ( Mathf.Abs(position.x - NewBehaviourScript.xPositionTorch)    > maximumDistance ){
-      //   position.x = NewBehaviourScript.xPositionTorch;
-      //   position.y = NewBehaviourScript.yPositionTorch;
-      // }
-      // if ( Mathf.Abs(position.y - NewBehaviourScript.yPositionTorch)    > maximumDistance ){
-      //   position.x = NewBehaviourScript.xPositionTorch;
-      //   position.y = NewBehaviourScript.yPositionTorch;
-      // }
-
-
-
-
-
-transform.position = position;
-
+    if (!isPlayerInTorch()) {
+      getPlayerInTorch();
     }
+  }
 }
