@@ -7,7 +7,12 @@ public class EnemySpawnerController : MonoBehaviour
     [SerializeField]
     private GameObject enemy1Prefab;
     [SerializeField]
-    private float enemyInterval = 3.5f;
+    private float enemy1Interval = 3.5f;
+
+    [SerializeField]
+    private GameObject enemy2Prefab;
+    [SerializeField]
+    private float enemy2Interval = 3.5f;
 
     private GameObject target;
 
@@ -18,7 +23,8 @@ public class EnemySpawnerController : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("EnemyTarget");
-        StartCoroutine(spawnEnemy(enemyInterval, enemy1Prefab));
+        StartCoroutine(spawnEnemy(enemy1Interval, enemy1Prefab));
+        StartCoroutine(spawnEnemy(enemy2Interval, enemy2Prefab));
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy){

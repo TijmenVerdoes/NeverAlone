@@ -24,7 +24,10 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate(){
         distance = Vector2.Distance(transform.position, target.transform.position);
-        rigidbody2d.MovePosition(Vector2.MoveTowards(this.transform.position, target.transform.position, speed * Time.deltaTime));
+        
+        Vector2 newVector = Vector2.MoveTowards(this.transform.position, target.transform.position, speed * Time.deltaTime);
+
+        rigidbody2d.MovePosition(newVector);
     }
 
     void OnCollisionStay2D(Collision2D collision){

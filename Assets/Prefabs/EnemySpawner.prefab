@@ -45,4 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy1Prefab: {fileID: 402185936409615432, guid: c1bec3c4312ba404887c7f0ebde0a8c2, type: 3}
-  enemyInterval: 3.5
+  enemy1Interval: 3.5
+  enemy2Prefab: {fileID: 402185936409615432, guid: f0c7a3f31eb8d2945bd80e95293915f2, type: 3}
+  enemy2Interval: 6
+  minDistanceToTarget: 0
