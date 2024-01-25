@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawnerScript : MonoBehaviour
+public class EnemySpawnerController : MonoBehaviour
 {
     [SerializeField]
     private GameObject enemy1Prefab;

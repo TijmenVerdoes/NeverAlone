@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIChase : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     private GameObject target;
     public float speed;
@@ -27,15 +27,19 @@ public class AIChase : MonoBehaviour
         rigidbody2d.MovePosition(Vector2.MoveTowards(this.transform.position, target.transform.position, speed * Time.deltaTime));
     }
 
-    void OnCollisionStay2D(Collision2D other){
-        PlayerMovementTemp playerScript = other.gameObject.GetComponent<PlayerMovementTemp>();
+    void OnCollisionStay2D(Collision2D collision){
+        // PlayerMovementController playerController = other.gameObject.GetComponent<PlayerMovementController>();
 
-        if(playerScript != null){
-            playerScript.changeHealth(-damage);
+        // if(playerController != null){
+        //     playerController.changeHealth(-damage);
+        // }
+
+        if(collision.gameObject.CompareTag("EnemyTarget")){
+            collision.gameObject.SendMessage("changeHealth", -damage);
         }
     }
 
-    void changeHealth(int amount){
+    public void changeHealth(int amount){
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log("Enemy health:" + currentHealth + "/" + maxHealth);
         StartCoroutine(VisualIndicator(Color.red));

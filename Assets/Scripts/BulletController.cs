@@ -6,9 +6,16 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     public AudioClip clip;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        AudioSource.PlayClipAtPoint(clip, this.gameObject.transform.position);
-        Destroy(gameObject);
+        if(collision.gameObject.CompareTag("Enemy")){
+            collision.gameObject.SendMessage("changeHealth", -1);
+
+            Debug.Log("Hit object " + collision);
+
+            AudioSource.PlayClipAtPoint(clip, this.gameObject.transform.position);
+            Destroy(gameObject);
+        }
+        
     }
 }
