@@ -28,12 +28,6 @@ public class EnemyController : MonoBehaviour
     }
 
     void OnCollisionStay2D(Collision2D collision){
-        // PlayerMovementController playerController = other.gameObject.GetComponent<PlayerMovementController>();
-
-        // if(playerController != null){
-        //     playerController.changeHealth(-damage);
-        // }
-
         if(collision.gameObject.CompareTag("EnemyTarget")){
             collision.gameObject.SendMessage("changeHealth", -damage);
         }

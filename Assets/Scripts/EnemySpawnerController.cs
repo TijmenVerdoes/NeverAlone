@@ -22,7 +22,7 @@ public class EnemySpawnerController : MonoBehaviour
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy){
-        Vector2 spawnPosition = new Vector2(Random.Range(-10F, 10), Random.Range(-5f, 5f));
+        Vector2 spawnPosition = new Vector2(Random.Range(-10F, 10), Random.Range(-5f, 4f));
         
         if((target.transform.position.x - spawnPosition.x > minDistanceToTarget || target.transform.position.x - spawnPosition.x < -minDistanceToTarget)
             &&
