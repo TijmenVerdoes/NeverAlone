@@ -8,13 +8,17 @@ namespace Player
     
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (!collision.gameObject.CompareTag("Enemy"))
+            if (collision.gameObject.CompareTag("EnemyTarget"))
             {
                 return;
             }
         
-            collision.gameObject.SendMessage("ChangeHealth", -1);
 
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                collision.gameObject.SendMessage("ChangeHealth", -1);
+            }
+            
             Debug.Log("Hit object " + collision);
 
             AudioSource.PlayClipAtPoint(clip, this.gameObject.transform.position);
