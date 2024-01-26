@@ -7,32 +7,28 @@ public class RubyController : MonoBehaviour {
 
   private float maximumDistanceSquered = 9f;
   private float playerSpeed = 0.1f;
-  void Start() {}
 
   private void movePlayer() {
-    float horizontal = Input.GetAxis("Horizontal");
-    float vertical = Input.GetAxis("Vertical");
+    var horizontal = Input.GetAxis("Horizontal");
+    var vertical = Input.GetAxis("Vertical");
     Vector2 position = transform.position;
-    position.x = position.x + playerSpeed * horizontal;
-    position.y = position.y + playerSpeed * vertical;
+    position.x += playerSpeed * horizontal;
+    position.y += playerSpeed * vertical;
 
     transform.position = position;
   }
 
   private bool isPlayerInTorch() {
     Vector2 position = transform.position;
-    float xDifference = position.x - NewBehaviourScript.xPositionTorch;
-    float yDifference = position.y - NewBehaviourScript.yPositionTorch;
+    var xDifference = position.x - NewBehaviourScript.xPositionTorch;
+    var yDifference = position.y - NewBehaviourScript.yPositionTorch;
 
-    float triangeTotal = xDifference * xDifference + yDifference * yDifference;
+    var triangeTotal = xDifference * xDifference + yDifference * yDifference;
 
-    if (triangeTotal > maximumDistanceSquered) {
-      return false;
-    }
-    return true;
+    return !(triangeTotal > maximumDistanceSquered);
   }
 
-  private void getPlayerInTorch() {
+  private void GetPlayerInTorch() {
     Vector2 position = transform.position;
 
     position.x = NewBehaviourScript.xPositionTorch;
@@ -42,11 +38,11 @@ public class RubyController : MonoBehaviour {
   }
 
   // Update is called once per frame
-  void Update() {
+  private void Update() {
     movePlayer();
 
     if (!isPlayerInTorch()) {
-      getPlayerInTorch();
+      GetPlayerInTorch();
     }
   }
 }
