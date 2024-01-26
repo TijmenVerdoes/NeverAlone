@@ -10,6 +10,8 @@ namespace Player
         public Rigidbody2D rb;
         public Camera cam;
         public Animator animator;
+        public AudioClip playerHurtClip;
+        public AudioClip playerDeadClip;
 
         private Vector2 movement;
 
@@ -64,9 +66,14 @@ namespace Player
 
                 isInvincible = true;
                 invincibleTimer = timeInvincible;
+                AudioSource.PlayClipAtPoint(playerHurtClip, gameObject.transform.position);
             }
 
             currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+            if (currentHealth == 0)
+            {
+                AudioSource.PlayClipAtPoint(playerDeadClip, gameObject.transform.position);
+            }
             StartCoroutine(VisualIndicator(Color.red));
             Debug.Log("Player heatlh: " + currentHealth + "/" + maxHealth);
             Healthbar.instance.SetValue(currentHealth, maxHealth);
