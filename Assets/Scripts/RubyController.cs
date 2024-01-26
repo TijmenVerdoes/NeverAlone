@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RubyController : MonoBehaviour {
+  public static float maximumDistancePlayer = 5.0f;
   private float maximumDistanceSquered = 9f;
   private float playerSpeed = 0.1f;
 
@@ -37,6 +38,7 @@ public class RubyController : MonoBehaviour {
 
   // Update is called once per frame
   private void Update() {
+    maximumDistanceSquered = maximumDistancePlayer*maximumDistancePlayer;
     movePlayer();
 
     if (!isPlayerInTorch()) {

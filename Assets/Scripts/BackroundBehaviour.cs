@@ -8,9 +8,6 @@ public class BackroundBehaviour : MonoBehaviour
     float previousXPosition;
     float previousYPosition;
     bool firstRun = true;
-//     public GameObject sprite;
-
-// public float scale = 5.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -46,13 +43,13 @@ Vector2 objectScale = transform.localScale;
 
 
 // Sets the local scale of game object
-transform.localScale = new Vector2(objectScale.x*0.9999f,  objectScale.y*0.9999f);
+transform.localScale = new Vector2(objectScale.x*0.99f,  objectScale.y*0.99f);
 
     if (objectScale.x < 1){
         transform.localScale = new Vector2(1,  1);
     }
-//     else{
- RubyController.maximumDistancePlayer = RubyController.maximumDistancePlayer*0.9999f;
-//     }
+     else{
+ RubyController.maximumDistancePlayer = RubyController.maximumDistancePlayer*0.99f;
+     }
     }
 }
