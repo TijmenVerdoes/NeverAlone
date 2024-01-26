@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e828e0801aee5b146b70092d30626199
+guid: 73990eb0688f8e14697824f5d210558a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,337 +123,301 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Room_0
+      name: Background_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 225
+        y: 200
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: -50}
+        - {x: -33, y: -50}
+        - {x: -33, y: 6}
+        - {x: 50, y: 7}
+        - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: ea7239caca62de744a8dde4bc0ee3d6b
-      internalID: 755554706
+      spriteID: eed696f2ce358f340b6618941ae6a520
+      internalID: 249956283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_1
+      name: Background_1
       rect:
         serializedVersion: 2
         x: 100
-        y: 225
+        y: 200
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: 5}
+        - {x: 50, y: 5}
+        - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: 55142b7c5987a90429e269f07b36a5bf
-      internalID: 337892377
+      spriteID: 8ed8410339f01134d8093a01e8c4862f
+      internalID: 875110116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_2
+      name: Background_2
       rect:
         serializedVersion: 2
         x: 200
-        y: 225
+        y: 200
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: 6}
+        - {x: 50, y: 6}
+        - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: a623f0ff4ccfd4d458e845b47697402b
-      internalID: 523023368
+      spriteID: c693d5defddd485428b03b68e757721b
+      internalID: -963960705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_3
+      name: Background_3
       rect:
         serializedVersion: 2
         x: 300
-        y: 225
+        y: 200
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: 6}
+        - {x: 33, y: 6}
+        - {x: 33, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: 309a79e5c040d334eb05b19da9f207fd
-      internalID: 1525491015
+      spriteID: cc59979b10c4da24c8840b55022a8cbe
+      internalID: -827962479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_4
+      name: Background_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 150
+        y: 100
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: -50}
+        - {x: -33, y: -50}
+        - {x: -33, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: b5b8903fc733f154d9624d421280ec19
-      internalID: -1681345933
+      spriteID: 83a74ef305931fc4184b97fc79f260c0
+      internalID: 2101464642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_5
+      name: Background_5
       rect:
         serializedVersion: 2
         x: 100
-        y: 150
+        y: 100
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 364f2980de5113b4d988e05bb2a40244
-      internalID: 1192121688
+      spriteID: 74bf842e6b935cd4b82557e61ca2bcd9
+      internalID: 822488091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_6
+      name: Background_6
       rect:
         serializedVersion: 2
         x: 200
-        y: 150
+        y: 100
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd287fe9a9651594395a3c4767b2ac52
-      internalID: -708116814
+      spriteID: 3140831a1f37cec439503928bb041c62
+      internalID: 1238690946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_7
+      name: Background_7
       rect:
         serializedVersion: 2
         x: 300
-        y: 150
+        y: 100
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 33, y: 50}
+        - {x: 33, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: cdde3898ef2fe464ab8ff9878d488f4a
-      internalID: -1619773176
+      spriteID: 9fe133bf9b4cd3344a0ee4c3ccfa2adb
+      internalID: 781916004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 75
-        width: 100
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d22f8e4e2259141498758e7f832f105d
-      internalID: 740576150
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Room_9
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 75
-        width: 100
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f32045f3979a72846aab43ab921f0b44
-      internalID: 700815293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Room_10
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 75
-        width: 100
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28832f506b0475f4085184b7a50e4cdf
-      internalID: 1407915990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Room_11
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 75
-        width: 100
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2ac59b3c5ec1db4da3ac9fdde3ce01e
-      internalID: -1170379797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Room_12
+      name: Background_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -33, y: 50}
+        - {x: -50, y: 50}
+        - {x: -50, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: -33}
+        - {x: -33, y: -33}
       tessellationDetail: 0
       bones: []
-      spriteID: 15918f4e214684c479c132e5887eb955
-      internalID: -411759924
+      spriteID: 1148b4be28a1475479fe659e509a8d24
+      internalID: -1322378639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_13
+      name: Background_9
       rect:
         serializedVersion: 2
         x: 100
         y: 0
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: -33}
+        - {x: -50, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: -33}
       tessellationDetail: 0
       bones: []
-      spriteID: e243172444dda2c4db83ab55ec1c68b8
-      internalID: -1824017883
+      spriteID: 2d83a6827b90a24408a0231b10fdba89
+      internalID: 909669028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_14
+      name: Background_10
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: -33}
+        - {x: -50, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: -33}
       tessellationDetail: 0
       bones: []
-      spriteID: d2de14c066a229a45a20bcb9c8f73896
-      internalID: -598564990
+      spriteID: 841b41193c18cfc419b95f7b77110bc0
+      internalID: 436790545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room_15
+      name: Background_11
       rect:
         serializedVersion: 2
         x: 300
         y: 0
         width: 100
-        height: 75
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 33, y: 50}
+        - {x: 33, y: -33}
+        - {x: -50, y: -33}
+        - {x: -50, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 50}
       tessellationDetail: 0
       bones: []
-      spriteID: 9b2f1e294f3f1d44a99fc4e8c3e95cb5
-      internalID: -1594217817
+      spriteID: 3b1b4203c39f7c3468b413aff038f168
+      internalID: 1589517850
       vertices: []
       indices: 
       edges: []
@@ -469,22 +433,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Room_0: 755554706
-      Room_1: 337892377
-      Room_10: 1407915990
-      Room_11: -1170379797
-      Room_12: -411759924
-      Room_13: -1824017883
-      Room_14: -598564990
-      Room_15: -1594217817
-      Room_2: 523023368
-      Room_3: 1525491015
-      Room_4: -1681345933
-      Room_5: 1192121688
-      Room_6: -708116814
-      Room_7: -1619773176
-      Room_8: 740576150
-      Room_9: 700815293
+      Background_0: 249956283
+      Background_1: 875110116
+      Background_10: 436790545
+      Background_11: 1589517850
+      Background_2: -963960705
+      Background_3: -827962479
+      Background_4: 2101464642
+      Background_5: 822488091
+      Background_6: 1238690946
+      Background_7: 781916004
+      Background_8: -1322378639
+      Background_9: 909669028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
