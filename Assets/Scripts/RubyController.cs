@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RubyController : MonoBehaviour {
-  // Start is called before the first frame update
-
   private float maximumDistanceSquered = 9f;
   private float playerSpeed = 0.1f;
 
