@@ -21,7 +21,7 @@ namespace Enemies
 
         private IEnumerator SpawnEnemy(float interval, GameObject enemy)
         {
-            var spawnPosition = new Vector2(Random.Range(-10F, 10), Random.Range(-5f, 4f));
+            var spawnPosition = new Vector2(Random.Range(-11F, 11), Random.Range(-4.75f, 4.5f));
 
             if ((target.transform.position.x - spawnPosition.x > minDistanceToTarget
                  || target.transform.position.x - spawnPosition.x < -minDistanceToTarget)
