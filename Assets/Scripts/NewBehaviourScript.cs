@@ -15,7 +15,11 @@ public class NewBehaviourScript : MonoBehaviour {
   private float torchSpeedHorizontal = 0.01f;
   private float torchSpeedVertical = 0.005f;
   // Start is called before the first frame update
-  void Start() {}
+  void Start() {
+       Vector2 position = transform.position;
+       xPositionTorch = position.x;
+       yPositionTorch = position.y;
+  }
 
   private void moveSideways() {
     Vector2 position = transform.position;

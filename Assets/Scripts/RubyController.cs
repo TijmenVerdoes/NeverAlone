@@ -5,7 +5,8 @@ using UnityEngine;
 public class RubyController : MonoBehaviour {
   // Start is called before the first frame update
 
-  private float maximumDistanceSquered = 9f;
+  public static float maximumDistancePlayer = 4.5f;
+  private float maximumDistanceSquered = 25f;
   private float playerSpeed = 0.1f;
   void Start() {}
 
@@ -15,7 +16,6 @@ public class RubyController : MonoBehaviour {
     Vector2 position = transform.position;
     position.x = position.x + playerSpeed * horizontal;
     position.y = position.y + playerSpeed * vertical;
-
     transform.position = position;
   }
 
@@ -33,6 +33,8 @@ public class RubyController : MonoBehaviour {
   }
 
   private void getPlayerInTorch() {
+
+
     Vector2 position = transform.position;
 
     position.x = NewBehaviourScript.xPositionTorch;
@@ -43,6 +45,7 @@ public class RubyController : MonoBehaviour {
 
   // Update is called once per frame
   void Update() {
+        maximumDistanceSquered = maximumDistancePlayer*maximumDistancePlayer;
     movePlayer();
 
     if (!isPlayerInTorch()) {
